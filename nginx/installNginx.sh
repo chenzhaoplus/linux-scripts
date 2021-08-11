@@ -1,6 +1,6 @@
 #!/bin/bash
 yum -y install gcc gcc-c++ automake pcre pcre-devel zlib zlib-devel openssl openssl-devel
-wget -P /ops/inst/  http://nginx.org/download/nginx-1.16.1.tar.gz
+# wget -P /ops/inst/  http://nginx.org/download/nginx-1.16.1.tar.gz
 useradd nginx
 
 tar -xf /ops/inst/nginx-1.16.1.tar.gz -C /usr/local/

@@ -1,8 +1,9 @@
 #!/bin/bash
-#Author: xusj
-#Date: 2020/6/17
+#Author: cz
+#Date: 2022/5/2
 
 echo -e "\e[0;32;1m===开始安装pgsql,大概需要15-20min...===\e[0m"
+yum remove postgresql*
 yum install https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm -y
 yum install postgresql12 -y
 yum install postgresql12-server -y
@@ -22,8 +23,8 @@ systemctl start postgresql-12
 
 echo -e "\e[0;32;1m===执行如下命令完成初始化用户创建和数据库实例创建===
 sudo -u postgres psql
-create database geomap;
-CREATE ROLE smcaiot WITH SUPERUSER LOGIN PASSWORD 'pgsql_p0o9i8u7y6';
+create database pgsql;
+CREATE ROLE smcaiot WITH SUPERUSER LOGIN PASSWORD '123';
 create extension postgis;
 create extension "uuid-ossp";
 \e[0m"
